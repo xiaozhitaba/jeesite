@@ -832,77 +832,77 @@
 				</configuration>
 			</plugin>
 			
-			<!-- Eclipse 插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.9</version>
-				<configuration>
-					<downloadSources>${downloadSources}</downloadSources>
-					<downloadJavadocs>false</downloadJavadocs>
-					<wtpversion>2.0</wtpversion>
-					<jeeversion>5.0</jeeversion>
-					<!-- <jeeversion>6.0</jeeversion> -->
-					<additionalConfig>
-						<file>
-							<name>.settings/org.eclipse.core.resources.prefs</name>
-							<content>
-								<![CDATA[eclipse.preferences.version=1${line.separator}encoding/<project>=${project.build.sourceEncoding}${line.separator}]]>
-							</content>
-						</file>
-					</additionalConfig>
-					<additionalProjectnatures>
-						<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>
-					</additionalProjectnatures>
-				</configuration>
-			</plugin>
-			
-			<!-- tomcat6插件 -->
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat6-maven-plugin</artifactId>
-				<version>${tomcat.version}</version> 
-				<configuration>
-					<port>${webserver.port}</port>
-					<path>/${project.artifactId}</path>
-					<uriEncoding>${project.build.sourceEncoding}</uriEncoding>
-				</configuration>
-			</plugin>
-			
-			<!-- tomcat7插件 -->
-			<plugin>
-				<groupId>org.apache.tomcat.maven</groupId>
-				<artifactId>tomcat7-maven-plugin</artifactId>
-				<version>${tomcat.version}</version> 
-				<configuration>
-					<port>${webserver.port}</port>
-					<path>/${project.artifactId}</path>
-					<uriEncoding>${project.build.sourceEncoding}</uriEncoding>
-				</configuration>
-			</plugin>
-			
-			<!-- jetty插件 -->
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>jetty-maven-plugin</artifactId>
-				<version>${jetty.version}</version>
-				<configuration>
-					<connectors>
-						<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-							<port>${webserver.port}</port>
-						</connector>
-					</connectors>
-					<webAppConfig>
-						<contextPath>/${project.artifactId}</contextPath>
-					</webAppConfig>
-					<systemProperties>  
-						<systemProperty>
-							<name>org.mortbay.util.URI.charset</name>
-							<value>${project.build.sourceEncoding}</value>
-						</systemProperty>
-					</systemProperties>
-				</configuration>
-			</plugin>
+			<!--&lt;!&ndash; Eclipse 插件 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-eclipse-plugin</artifactId>-->
+				<!--<version>2.9</version>-->
+				<!--<configuration>-->
+					<!--<downloadSources>${downloadSources}</downloadSources>-->
+					<!--<downloadJavadocs>false</downloadJavadocs>-->
+					<!--<wtpversion>2.0</wtpversion>-->
+					<!--<jeeversion>5.0</jeeversion>-->
+					<!--&lt;!&ndash; <jeeversion>6.0</jeeversion> &ndash;&gt;-->
+					<!--<additionalConfig>-->
+						<!--<file>-->
+							<!--<name>.settings/org.eclipse.core.resources.prefs</name>-->
+							<!--<content>-->
+								<!--<![CDATA[eclipse.preferences.version=1${line.separator}encoding/<project>=${project.build.sourceEncoding}${line.separator}]]>-->
+							<!--</content>-->
+						<!--</file>-->
+					<!--</additionalConfig>-->
+					<!--<additionalProjectnatures>-->
+						<!--<projectnature>org.springframework.ide.eclipse.core.springnature</projectnature>-->
+					<!--</additionalProjectnatures>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!---->
+			<!--&lt;!&ndash; tomcat6插件 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.tomcat.maven</groupId>-->
+				<!--<artifactId>tomcat6-maven-plugin</artifactId>-->
+				<!--<version>${tomcat.version}</version> -->
+				<!--<configuration>-->
+					<!--<port>${webserver.port}</port>-->
+					<!--<path>/${project.artifactId}</path>-->
+					<!--<uriEncoding>${project.build.sourceEncoding}</uriEncoding>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!---->
+			<!--&lt;!&ndash; tomcat7插件 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.tomcat.maven</groupId>-->
+				<!--<artifactId>tomcat7-maven-plugin</artifactId>-->
+				<!--<version>${tomcat.version}</version> -->
+				<!--<configuration>-->
+					<!--<port>${webserver.port}</port>-->
+					<!--<path>/${project.artifactId}</path>-->
+					<!--<uriEncoding>${project.build.sourceEncoding}</uriEncoding>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
+			<!---->
+			<!--&lt;!&ndash; jetty插件 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.mortbay.jetty</groupId>-->
+				<!--<artifactId>jetty-maven-plugin</artifactId>-->
+				<!--<version>${jetty.version}</version>-->
+				<!--<configuration>-->
+					<!--<connectors>-->
+						<!--<connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">-->
+							<!--<port>${webserver.port}</port>-->
+						<!--</connector>-->
+					<!--</connectors>-->
+					<!--<webAppConfig>-->
+						<!--<contextPath>/${project.artifactId}</contextPath>-->
+					<!--</webAppConfig>-->
+					<!--<systemProperties>  -->
+						<!--<systemProperty>-->
+							<!--<name>org.mortbay.util.URI.charset</name>-->
+							<!--<value>${project.build.sourceEncoding}</value>-->
+						<!--</systemProperty>-->
+					<!--</systemProperties>-->
+				<!--</configuration>-->
+			<!--</plugin>-->
 			
 			<!-- resource插件 -->
 			<plugin>
@@ -925,12 +925,12 @@
 				<version>2.5</version>
 			</plugin>
 			
-			<!-- ant插件 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
-			</plugin>
+			<!--&lt;!&ndash; ant插件 &ndash;&gt;-->
+			<!--<plugin>-->
+				<!--<groupId>org.apache.maven.plugins</groupId>-->
+				<!--<artifactId>maven-antrun-plugin</artifactId>-->
+				<!--<version>1.7</version>-->
+			<!--</plugin>-->
 			
 			<!-- dependency插件 -->
 			<plugin>
@@ -965,15 +965,16 @@
 						<version>1.7</version>
 						<configuration>
 							<target>
-								
+								<!-- mssql
+                            	<property name="dbunit.datatype" value="org.dbunit.ext.mssql.MsSqlDataTypeFactory" /> -->
+
+								<!-- oracle
+								<property name="dbunit.datatype" value="org.dbunit.ext.oracle.Oracle10DataTypeFactory" /> -->
+
 								<!-- mysql -->
 								<property name="dbunit.datatype" value="org.dbunit.ext.mysql.MySqlDataTypeFactory" />
 								
-								<!-- mssql
-								<property name="dbunit.datatype" value="org.dbunit.ext.mssql.MsSqlDataTypeFactory" /> -->
-								
-								<!-- oracle
-								<property name="dbunit.datatype" value="org.dbunit.ext.oracle.Oracle10DataTypeFactory" /> -->
+
 								
 								<property file="src/main/resources/jeesite.properties" />
 								<sql driver="${jdbc.driver}" url="${jdbc.url}" userid="${jdbc.username}" password="${jdbc.password}" 
